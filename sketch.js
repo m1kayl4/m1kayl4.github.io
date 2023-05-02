@@ -18,7 +18,7 @@ function draw() {
   amp = constrain(map(mouseY, height, 0, 0, 1), 0, 1);
 
 
-  text('tap to play', width/2, height/2.25);
+  text('tap to play', windowWidth/2, windowHeight/2.25);
   
   if (playing) {
     // smooth the transitions by 0.1 seconds
