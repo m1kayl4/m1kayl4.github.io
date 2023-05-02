@@ -1,5 +1,7 @@
 let osc, playing, freq, amp;
 
+//i took the osc, freq and amp analysis code from the p5.Oscillator reference page
+
 function setup() {
   let cnv = createCanvas(windowWidth, windowHeight);
   cnv.mousePressed(playOscillator);
@@ -24,14 +26,14 @@ function draw() {
     osc.amp(amp, 0.1);
     background(mouseX/4,mouseY/2,240)
   
-  //i took this text from the p5.Oscillator reference page but I changed its placement within the canvas/canvas size
- text('tap to play', width/2, height/2.25);
-  text('freq: ' + freq, width/2, height/2);
-  text('amp: ' + amp, width/2, height/1.80);
+
+ text('tap to play', windowWidth/2, windowHeight/2.25);
+  text('freq: ' + freq, windowWidth/2, windowHeight/2);
+  text('amp: ' + amp, windowWidth/2, windowHeight/1.80);
   }  
 }
 
-//i took this from the p5.Oscillator reference page
+
 function playOscillator() {
   osc.start();
   playing = true;
